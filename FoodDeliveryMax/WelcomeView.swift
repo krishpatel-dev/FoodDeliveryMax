@@ -16,7 +16,7 @@ struct WelcomeView: View {
                         .scaledToFit()
                         .frame(width: 60, height: 60)
                         .padding(.bottom, 8)
-                        .padding(.bottom, 3)
+                        .padding(.bottom, 5)
                     
                     Text("Welcome \nto our Store")
                         .font(.customfont(.semibold, fontSize: 50))
