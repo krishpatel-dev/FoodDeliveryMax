@@ -27,6 +27,7 @@
 		3E431B922D43B05E002829F8 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B912D43B05E002829F8 /* UIKitExtension.swift */; };
 		3E7D7E1C2D53942B003658CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D7E1B2D53942B003658CB /* HomeView.swift */; };
 		3EC0E3FF2D411D24007144DE /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0E3FE2D411D24007144DE /* LineTextField.swift */; };
+		3EDC68C02D54EB5C00D218FA /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDC68BF2D54EB5C00D218FA /* ProductItemView.swift */; };
 		3F1251992D3FBF5B0041E677 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251972D3FBF5B0041E677 /* Country.swift */; };
 		3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
@@ -81,6 +82,7 @@
 		3E431B912D43B05E002829F8 /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		3E7D7E1B2D53942B003658CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3EC0E3FE2D411D24007144DE /* LineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		3EDC68BF2D54EB5C00D218FA /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		3F1251972D3FBF5B0041E677 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +274,7 @@
 				3E431B6E2D43AD89002829F8 /* ServiceCall.swift */,
 				3F1251972D3FBF5B0041E677 /* Country.swift */,
 				3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */,
+				3EDC68BF2D54EB5C00D218FA /* ProductItemView.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				3E431B8A2D43AE91002829F8 /* ImageModel.swift in Sources */,
 				3E431B882D43AE91002829F8 /* TypeModel.swift in Sources */,
 				AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */,
+				3EDC68C02D54EB5C00D218FA /* ProductItemView.swift in Sources */,
 				3E431B7D2D43AE18002829F8 /* TabButton.swift in Sources */,
 				3E431B7C2D43AE18002829F8 /* SectionTitleAll.swift in Sources */,
 				3E431B6F2D43AD89002829F8 /* ServiceCall.swift in Sources */,

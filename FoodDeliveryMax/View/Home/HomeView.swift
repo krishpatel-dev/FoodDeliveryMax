@@ -3,7 +3,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView{
+        ScrollView (.vertical, showsIndicators: false){
             VStack{
                 Image("color_logo")
                     .resizable()
@@ -51,128 +51,30 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 165,height: 200)
-                            .padding(.leading)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("banana")
-                                        .resizable()
-                                        .frame(width: 110, height: 90)
-                                    
-                                    Text("Organic Bananas")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("7pcs, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "banana",
+                            productName: "Organic Bananas",
+                            description: "7pcs, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading)
                         
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 165,height: 200)
-                            .padding(.leading, 8)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("apple")
-                                        .resizable()
-                                        .frame(width: 130, height: 90)
-                                    
-                                    Text("Red Apple")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("1kg, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "apple",
+                            productName: "Red Apple",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
                         
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 170,height: 200)
-                            .padding(.leading, 8)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("banana")
-                                        .resizable()
-                                        .frame(width: 110, height: 90)
-                                    
-                                    Text("Organic Bananas")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("7pcs, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "banana",
+                            productName: "Organic Bananas",
+                            description: "7pcs, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
                     }
-                    
                 }
                 
                 HStack{
@@ -195,128 +97,32 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 165,height: 200)
-                            .padding(.leading)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("bell_pepper_red")
-                                        .resizable()
-                                        .frame(width: 110, height: 90)
-                                    
-                                    Text("Bell Pepper Red")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("1kg, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "bell_pepper_red",
+                            productName: "Bell Pepper Red",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading)
                         
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 165,height: 200)
-                            .padding(.leading, 8)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("ginger")
-                                        .resizable()
-                                        .frame(width: 130, height: 90)
-                                    
-                                    Text("Ginger")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("250gm, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "ginger",
+                            productName: "Ginger",
+                            description: "250gm, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
                         
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 0.8)
-                            .frame(width: 170,height: 200)
-                            .padding(.leading, 8)
-                            .overlay(
-                                VStack(alignment: .leading) {
-                                    
-                                    Image("bell_pepper_red")
-                                        .resizable()
-                                        .frame(width: 110, height: 90)
-                                    
-                                    Text("Bell Pepper Red")
-                                        .font(.customfont(.semibold, fontSize: 16))
-                                        .foregroundColor(.primaryText)
-                                    
-                                    Text("1kg, Priceg")
-                                        .font(.customfont(.semibold, fontSize: 10))
-                                        .foregroundColor(.gray)
-                                    
-                                    HStack {
-                                        Text("$4.99")
-                                            .font(.customfont(.semibold, fontSize: 17))
-                                            .padding(.top)
-                                        
-                                        Button(action: {}) {
-                                            Image("add")
-                                                .resizable()
-                                                .frame(width: 20, height: 20)
-                                                .padding(7)
-                                            
-                                        }
-                                        .background(Color.primaryApp)
-                                        .cornerRadius(10)
-                                        .padding(.top)
-                                        .padding(.leading, 50)
-                                    }
-                                }
-                            )
+                        ProductItemView(
+                            imageName: "bell_pepper_red",
+                            productName: "Bell Pepper Red",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
                     }
                 }
+                
                 HStack{
                     Text("Groceries")
                         .font(.customfont(.semibold, fontSize: 19))
@@ -333,6 +139,79 @@ struct HomeView: View {
                     }
                 }
                 .padding(.top, 5)
+                
+                
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        Button(action: {}) {
+                            HStack{
+                                Image("pulses")
+                                    .resizable()
+                                    .frame(width: 70, height: 70)
+                                    .padding(.leading, 15)
+                                    .padding(.top, 15)
+                                    .padding(.bottom, 15)
+                                
+                                Text("Pulses")
+                                    .font(.customfont(.semibold, fontSize: 19))
+                                    .foregroundColor(.primaryText)
+                                    .padding(.trailing, 70)
+                            }
+                        }
+                        .background(Color(hex: "#fbe1cd"))
+                        .cornerRadius(10)
+                        .padding(.leading)
+                        
+                        Button(action: {}) {
+                            HStack{
+                                Image("rice")
+                                    .resizable()
+                                    .frame(width: 70, height: 70)
+                                    .padding(.leading, 15)
+                                    .padding(.top, 15)
+                                    .padding(.bottom, 15)
+                                
+                                Text("Rice")
+                                    .font(.customfont(.semibold, fontSize: 19))
+                                    .foregroundColor(.primaryText)
+                                    .padding(.trailing, 85)
+                            }
+                        }
+                        .background(Color(hex: "#dafbd9"))
+                        .cornerRadius(10)
+                        .padding(.leading)
+                    }
+                }
+                .padding(.bottom, 16)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ProductItemView(
+                            imageName: "beef_bone",
+                            productName: "Beef Bone",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading)
+                        
+                        ProductItemView(
+                            imageName: "broiler_chicken",
+                            productName: "Broiler Chicken",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
+                        
+                        ProductItemView(
+                            imageName: "beef_bone",
+                            productName: "Beef Bone",
+                            description: "1kg, Priceg",
+                            price: "$4.99"
+                        )
+                        .padding(.leading, 8)
+                    }
+                }
             }
         }
     }
