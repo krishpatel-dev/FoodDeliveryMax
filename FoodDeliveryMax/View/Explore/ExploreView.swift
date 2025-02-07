@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Explore: View {
+struct ExploreView: View {
     var body: some View {
         ScrollView{
             VStack{
@@ -77,5 +77,5 @@ struct Explore: View {
 }
 
 #Preview {
-    Explore()
+    ExploreView()
 }
