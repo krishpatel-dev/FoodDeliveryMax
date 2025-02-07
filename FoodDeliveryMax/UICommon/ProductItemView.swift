@@ -45,3 +45,7 @@ struct ProductItemView: View {
             )
     }
 }
+
+#Preview {
+    ProductItemView(imageName: "banana", productName: "banana", description: "1kg", price: "$4.99")
+}

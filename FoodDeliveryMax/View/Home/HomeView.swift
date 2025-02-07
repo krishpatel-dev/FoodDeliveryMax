@@ -22,7 +22,7 @@ struct HomeView: View {
                         .foregroundColor(.darkGray)
                 }
                 
-                SearchTextField(searchText: .constant(""), placeholder: "Search products")
+                SearchTextField(searchText: .constant(""), placeholder: "Search Store")
                     .padding()
                 
                 Image("banner_top")
