@@ -60,7 +60,7 @@ struct HomeView: View {
                         .padding(.leading)
                         
                         ProductItemView(
-                            imageName: "apple",
+                            imageName: "apple_red",
                             productName: "Red Apple",
                             description: "1kg, Priceg",
                             price: "$4.99"

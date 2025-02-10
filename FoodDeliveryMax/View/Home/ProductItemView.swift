@@ -12,6 +12,7 @@ struct ProductItemView: View {
             .frame(width: 165, height: 220)
             .overlay(
                 VStack(alignment: .leading) {
+                    
                     Image(imageName)
                         .resizable()
                         .frame(width: 110, height: 90)
