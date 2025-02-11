@@ -55,7 +55,8 @@ struct HomeView: View {
                             imageName: "banana",
                             productName: "Organic Bananas",
                             description: "7pcs, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(BananaDetail())
                         )
                         .padding(.leading)
                         
@@ -63,7 +64,8 @@ struct HomeView: View {
                             imageName: "apple_red",
                             productName: "Red Apple",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(AppleDetail())
                         )
                         .padding(.leading, 8)
                         
@@ -71,7 +73,8 @@ struct HomeView: View {
                             imageName: "banana",
                             productName: "Organic Bananas",
                             description: "7pcs, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(BananaDetail())
                         )
                         .padding(.leading, 8)
                     }
@@ -101,7 +104,8 @@ struct HomeView: View {
                             imageName: "bell_pepper_red",
                             productName: "Bell Pepper Red",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(PepperDetail())
                         )
                         .padding(.leading)
                         
@@ -109,7 +113,8 @@ struct HomeView: View {
                             imageName: "ginger",
                             productName: "Ginger",
                             description: "250gm, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(GingerDetail())
                         )
                         .padding(.leading, 8)
                         
@@ -117,7 +122,8 @@ struct HomeView: View {
                             imageName: "bell_pepper_red",
                             productName: "Bell Pepper Red",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(PepperDetail())
                         )
                         .padding(.leading, 8)
                     }
@@ -191,7 +197,8 @@ struct HomeView: View {
                             imageName: "beef_bone",
                             productName: "Beef Bone",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(BeefDetail())
                         )
                         .padding(.leading)
                         
@@ -199,7 +206,8 @@ struct HomeView: View {
                             imageName: "broiler_chicken",
                             productName: "Broiler Chicken",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(ChickenDetail())
                         )
                         .padding(.leading, 8)
                         
@@ -207,7 +215,8 @@ struct HomeView: View {
                             imageName: "beef_bone",
                             productName: "Beef Bone",
                             description: "1kg, Priceg",
-                            price: "$4.99"
+                            price: "$4.99",
+                            detailView: AnyView(BeefDetail())
                         )
                         .padding(.leading, 8)
                     }

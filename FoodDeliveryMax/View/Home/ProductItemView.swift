@@ -5,6 +5,8 @@ struct ProductItemView: View {
     let productName: String
     let description: String
     let price: String
+    let detailView: AnyView
+    
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -13,10 +15,12 @@ struct ProductItemView: View {
             .overlay(
                 VStack(alignment: .leading) {
                     
-                    Image(imageName)
-                        .resizable()
-                        .frame(width: 110, height: 90)
-                        .padding(.bottom, 15)
+                    NavigationLink(destination: detailView) {
+                        Image(imageName)
+                            .resizable()
+                            .frame(width: 110, height: 90)
+                            .padding(.bottom, 15)
+                    }
                     
                     Text(productName)
                         .font(.customfont(.semibold, fontSize: 16))
@@ -48,5 +52,6 @@ struct ProductItemView: View {
 }
 
 #Preview {
-    ProductItemView(imageName: "banana", productName: "banana", description: "1kg", price: "$4.99")
+    ProductItemView(imageName: "banana", productName: "banana", description: "1kg", price: "$4.99",                             detailView: AnyView(BananaDetail())
+    )
 }

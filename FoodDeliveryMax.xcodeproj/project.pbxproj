@@ -37,6 +37,12 @@
 		3F1251992D3FBF5B0041E677 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251972D3FBF5B0041E677 /* Country.swift */; };
 		3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */; };
 		3F1D88332D59F95500EE6DCC /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D88322D59F95500EE6DCC /* ProductDetailView.swift */; };
+		3FC175DE2D5B5D9F0037260B /* AppleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175DD2D5B5D9F0037260B /* AppleDetail.swift */; };
+		3FC175E02D5B5EA40037260B /* BananaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175DF2D5B5EA40037260B /* BananaDetail.swift */; };
+		3FC175E22D5B5EC30037260B /* PepperDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E12D5B5EC30037260B /* PepperDetail.swift */; };
+		3FC175E42D5B5ECE0037260B /* GingerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E32D5B5ECE0037260B /* GingerDetail.swift */; };
+		3FC175E62D5B5EED0037260B /* BeefDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E52D5B5EED0037260B /* BeefDetail.swift */; };
+		3FC175E82D5B5EFB0037260B /* ChickenDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E72D5B5EFB0037260B /* ChickenDetail.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
 		AFA620502D311F370018E268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA6204F2D311F370018E268 /* Assets.xcassets */; };
 		AFA620532D311F370018E268 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA620522D311F370018E268 /* Preview Assets.xcassets */; };
@@ -99,6 +105,12 @@
 		3F1251972D3FBF5B0041E677 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F1251982D3FBF5B0041E677 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		3F1D88322D59F95500EE6DCC /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		3FC175DD2D5B5D9F0037260B /* AppleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDetail.swift; sourceTree = "<group>"; };
+		3FC175DF2D5B5EA40037260B /* BananaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaDetail.swift; sourceTree = "<group>"; };
+		3FC175E12D5B5EC30037260B /* PepperDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PepperDetail.swift; sourceTree = "<group>"; };
+		3FC175E32D5B5ECE0037260B /* GingerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GingerDetail.swift; sourceTree = "<group>"; };
+		3FC175E52D5B5EED0037260B /* BeefDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeefDetail.swift; sourceTree = "<group>"; };
+		3FC175E72D5B5EFB0037260B /* ChickenDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenDetail.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryMaxApp.swift; sourceTree = "<group>"; };
 		AFA6204F2D311F370018E268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +192,12 @@
 				3E7D7E1B2D53942B003658CB /* HomeView.swift */,
 				3EDC68BF2D54EB5C00D218FA /* ProductItemView.swift */,
 				3F1D88322D59F95500EE6DCC /* ProductDetailView.swift */,
+				3FC175DD2D5B5D9F0037260B /* AppleDetail.swift */,
+				3FC175E12D5B5EC30037260B /* PepperDetail.swift */,
+				3FC175DF2D5B5EA40037260B /* BananaDetail.swift */,
+				3FC175E32D5B5ECE0037260B /* GingerDetail.swift */,
+				3FC175E52D5B5EED0037260B /* BeefDetail.swift */,
+				3FC175E72D5B5EFB0037260B /* ChickenDetail.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -488,9 +506,12 @@
 				3E951C602D564499006A6942 /* ExploreView.swift in Sources */,
 				3E7D7E1C2D53942B003658CB /* HomeView.swift in Sources */,
 				3E951C582D5643D3006A6942 /* MainTabView.swift in Sources */,
+				3FC175E22D5B5EC30037260B /* PepperDetail.swift in Sources */,
+				3FC175E42D5B5ECE0037260B /* GingerDetail.swift in Sources */,
 				3E431B922D43B05E002829F8 /* UIKitExtension.swift in Sources */,
 				3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */,
 				3E951C662D56476B006A6942 /* CategoryButton.swift in Sources */,
+				3FC175DE2D5B5D9F0037260B /* AppleDetail.swift in Sources */,
 				3E431B6C2D43AD63002829F8 /* HomeViewModel.swift in Sources */,
 				3E431B7B2D43AE18002829F8 /* BackButton.swift in Sources */,
 				3E431B892D43AE91002829F8 /* ProductModel.swift in Sources */,
@@ -499,13 +520,16 @@
 				3E431B8B2D43AE91002829F8 /* UserModel.swift in Sources */,
 				3E392E882D3FCF4A0000EFA2 /* SignUpView.swift in Sources */,
 				3F1251992D3FBF5B0041E677 /* Country.swift in Sources */,
+				3FC175E62D5B5EED0037260B /* BeefDetail.swift in Sources */,
 				3E431B8A2D43AE91002829F8 /* ImageModel.swift in Sources */,
 				3E431B882D43AE91002829F8 /* TypeModel.swift in Sources */,
 				AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */,
 				3E951C642D5644BB006A6942 /* AccountView.swift in Sources */,
 				3EDC68C02D54EB5C00D218FA /* ProductItemView.swift in Sources */,
+				3FC175E02D5B5EA40037260B /* BananaDetail.swift in Sources */,
 				3E431B7D2D43AE18002829F8 /* TabButton.swift in Sources */,
 				3E431B7C2D43AE18002829F8 /* SectionTitleAll.swift in Sources */,
+				3FC175E82D5B5EFB0037260B /* ChickenDetail.swift in Sources */,
 				3E431B6F2D43AD89002829F8 /* ServiceCall.swift in Sources */,
 				3E431B872D43AE91002829F8 /* NutritionModel.swift in Sources */,
 				3E431B782D43AE18002829F8 /* SearchTextField.swift in Sources */,

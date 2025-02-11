@@ -1,32 +1,42 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @State private var isFavorite = false
+    @Environment(\.presentationMode) var presentationMode // Access the presentation mode
+    
+    var productImage: String
+    var productName: String
+    var productQuantity: String
+    var productPrice: String
+    var productDetail: String
+    var nutritions: String
+    
     var body: some View {
-        ZStack{
-            VStack(alignment: .leading){
+        ZStack {
+            VStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Color.black.opacity(0.07))
                     .frame(width: .infinity, height: 360)
                     .overlay(
-                        Image("apple_red")
+                        Image(productImage)
                             .resizable()
                             .frame(width: .infinity, height: 200)
                             .padding(.top, 50)
-                            .padding(.leading, 35)
-                            .padding(.trailing, 35)
-                        
+                            .padding(.horizontal, 35)
                     )
                     .ignoresSafeArea(edges: .top)
                 
-                HStack{
-                    Text("Natural Red Apple")
+                HStack {
+                    Text(productName)
                         .font(.customfont(.bold, fontSize: 19))
                         .foregroundColor(.primaryText)
                         .padding(.leading)
                     Spacer()
                     
-                    Button(action: {}){
-                        Image("fav")
+                    Button(action: {
+                        isFavorite.toggle()
+                    }) {
+                        Image(isFavorite ? "favorite" : "fav")
                             .resizable()
                             .frame(width: 20, height: 20)
                             .padding()
@@ -34,13 +44,13 @@ struct ProductDetailView: View {
                 }
                 .padding(.top, -70)
                 
-                Text("1kg, Price")
+                Text(productQuantity)
                     .font(.customfont(.semibold, fontSize: 14))
                     .foregroundColor(.gray)
                     .padding()
                     .padding(.top, -52)
                 
-                HStack{
+                HStack {
                     Button(action: {}) {
                         Image("subtack")
                             .resizable()
@@ -67,26 +77,26 @@ struct ProductDetailView: View {
                     
                     Spacer()
                     
-                    Text("$4.99")
+                    Text("$\(productPrice)")
                         .font(.customfont(.bold, fontSize: 20))
                         .foregroundColor(.primaryText)
                         .padding(.trailing)
                 }
+                .padding(.bottom)
                 
                 Rectangle()
                     .stroke(Color.black.opacity(0.1))
                     .frame(width: .infinity, height: 0.5)
-                    .padding(.leading)
-                    .padding(.trailing)
-                    
-                HStack{
+                    .padding(.horizontal)
+                
+                HStack {
                     Text("Product Detail")
                         .font(.customfont(.semibold, fontSize: 15))
                         .foregroundColor(.primaryText)
                         .padding(.leading)
                     Spacer()
                     
-                    Button(action: {}){
+                    Button(action: {}) {
                         Image("detail_open")
                             .resizable()
                             .frame(width: 16, height: 9)
@@ -94,19 +104,18 @@ struct ProductDetailView: View {
                     }
                 }
                 
-                Text("Apples are nutritious. Apple may be good for weight loss. Apples may be good for your heart. As part of a healtful and varied diet.")
+                Text(productDetail)
                     .font(.customfont(.medium, fontSize: 13))
                     .foregroundStyle(.secondary)
-                    .padding(.leading)
-                    .padding(.trailing)
+                    .padding(.horizontal)
+                    .padding(.bottom)
                 
                 Rectangle()
                     .stroke(Color.black.opacity(0.1))
                     .frame(width: .infinity, height: 0.5)
-                    .padding(.leading)
-                    .padding(.trailing)
+                    .padding(.horizontal)
                 
-                HStack{
+                HStack {
                     Text("Nutritions")
                         .font(.customfont(.semibold, fontSize: 15))
                         .foregroundColor(.primaryText)
@@ -117,16 +126,16 @@ struct ProductDetailView: View {
                         .fill(Color.black.opacity(0.07))
                         .frame(width: 40, height: 20)
                         .overlay(
-                            Text("100gr")
+                            Text(nutritions)
                                 .font(.customfont(.semibold, fontSize: 10))
                                 .foregroundStyle(.secondary)
                         )
                         .padding(.trailing, -10)
                     
-                    Button(action: {}){
+                    Button(action: {}) {
                         Image("next_1")
                             .resizable()
-                            .frame(width: 25, height:25)
+                            .frame(width: 25, height: 25)
                             .padding()
                     }
                 }
@@ -134,10 +143,9 @@ struct ProductDetailView: View {
                 Rectangle()
                     .stroke(Color.black.opacity(0.1))
                     .frame(width: .infinity, height: 0.5)
-                    .padding(.leading)
-                    .padding(.trailing)
+                    .padding(.horizontal)
                 
-                HStack{
+                HStack {
                     Text("Review")
                         .font(.customfont(.semibold, fontSize: 15))
                         .foregroundColor(.primaryText)
@@ -148,85 +156,65 @@ struct ProductDetailView: View {
                         .fill(Color.white)
                         .frame(width: 100, height: 20)
                         .overlay(
-                            HStack{
-                                Image("star")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.trailing, -5)
-                                
-                                Image("star")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.trailing, -5)
-
-                                Image("star")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.trailing, -5)
-
-                                Image("star")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.trailing, -5)
-
-                                Image("star")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.trailing, -5)
-                                
+                            HStack {
+                                ForEach(0..<5) { _ in
+                                    Image("star")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                        .padding(.trailing, -5)
+                                }
                             }
                         )
                         .padding(.trailing, -10)
                     
-                    Button(action: {}){
+                    Button(action: {}) {
                         Image("next_1")
                             .resizable()
-                            .frame(width: 25, height:25)
+                            .frame(width: 25, height: 25)
                             .padding()
                     }
                 }
                 
-                Button(action: {}){
+                Button(action: {}) {
                     Text("Add to Basket")
-                        .font(.customfont(.semibold, fontSize: 20))
+                        .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.white)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
+                        .background(Color.primaryApp)
+                        .cornerRadius(20)
+                        .padding(.horizontal)
                 }
                 
-                .background(Color.primaryApp)
-                .cornerRadius(10)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
-        
             }
             .frame(maxHeight: .infinity, alignment: .top)
             
-            
-            
-            VStack{
-                HStack{
-                    NavigationLink {
-                        HomeView()
-                    } label: {
+            VStack {
+                HStack {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
+                    }) {
                         Image("back")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)
                     }
                     Spacer()
-                    
-                    
                 }
                 Spacer()
             }
             .padding(.top, 10)
             .padding(.horizontal, 20)
         }
-        
-        
+        .navigationBarBackButtonHidden(true) // Hide the default back button
     }
 }
 
-
-
 #Preview {
-    ProductDetailView()
+    ProductDetailView(
+        productImage: "apple_red",
+        productName: "Natural Red Apple",
+        productQuantity: "1kg",
+        productPrice: "4.99",
+        productDetail: "Apples are nutritious. Apple may be good for weight loss. Apples may be good for your heart. As part of a healthy and varied diet.",
+        nutritions: "100gr")
 }
