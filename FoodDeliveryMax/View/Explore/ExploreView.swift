@@ -14,6 +14,7 @@ struct ExploreView: View {
                 Text("Find Products")
                     .font(.customfont(.bold, fontSize: 20))
                     .foregroundColor(.primaryText)
+                    .padding(.top)
                 
                 SearchTextField(searchText: .constant(""), placeholder: "Search Store")
                     .padding()
@@ -68,6 +69,24 @@ struct ExploreView: View {
                         backgroundColor: Color.blue.opacity(0.1),
                         imageName: "beverages",
                         text: "Beverages"
+                    )
+                }
+                .padding(.bottom)
+                
+                HStack{
+                    CategoryCard(
+                        borderColor: Color.indigo.opacity(0.9),
+                        backgroundColor: Color.indigo.opacity(0.1),
+                        imageName: "frash_fruits",
+                        text: "Fresh Fruits & Vegetables"
+                    )
+                    .padding(.trailing)
+                    
+                    CategoryCard(
+                        borderColor: Color.black.opacity(0.9),
+                        backgroundColor: Color.black.opacity(0.1),
+                        imageName: "cooking_oil",
+                        text: "Cooking Oil & Ghee"
                     )
                 }
                 .padding(.bottom)

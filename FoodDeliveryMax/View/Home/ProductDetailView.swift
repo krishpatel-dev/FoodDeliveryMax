@@ -199,13 +199,23 @@ struct ProductDetailView: View {
                             .frame(width: 20, height: 20)
                     }
                     Spacer()
+                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
+                    }) {
+                        Image("share")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .padding(.trailing)
+                    }
                 }
                 Spacer()
             }
-            .padding(.top, 10)
-            .padding(.horizontal, 20)
+            .padding(.top)
+            .padding(.horizontal)
         }
-        .navigationBarBackButtonHidden(true) // Hide the default back button
+        .navigationBarBackButtonHidden(true)
     }
 }
 

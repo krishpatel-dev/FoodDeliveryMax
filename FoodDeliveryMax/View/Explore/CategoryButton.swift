@@ -11,7 +11,10 @@ struct CategoryCard: View {
         Button(action: {}){
             RoundedRectangle(cornerRadius: 15)
                 .stroke(borderColor, lineWidth: 0.8)
-                .background(backgroundColor)
+                .background(
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(backgroundColor)
+                )
                 .frame(width: 165, height: 175)
                 .overlay(
                     VStack {

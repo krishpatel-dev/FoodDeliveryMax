@@ -43,6 +43,7 @@
 		3FC175E42D5B5ECE0037260B /* GingerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E32D5B5ECE0037260B /* GingerDetail.swift */; };
 		3FC175E62D5B5EED0037260B /* BeefDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E52D5B5EED0037260B /* BeefDetail.swift */; };
 		3FC175E82D5B5EFB0037260B /* ChickenDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC175E72D5B5EFB0037260B /* ChickenDetail.swift */; };
+		3FE5EE2E2D5DF47F002EDCFC /* Beverages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5EE2D2D5DF47F002EDCFC /* Beverages.swift */; };
 		AFA6204C2D311F350018E268 /* FoodDeliveryMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */; };
 		AFA620502D311F370018E268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA6204F2D311F370018E268 /* Assets.xcassets */; };
 		AFA620532D311F370018E268 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA620522D311F370018E268 /* Preview Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		3FC175E32D5B5ECE0037260B /* GingerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GingerDetail.swift; sourceTree = "<group>"; };
 		3FC175E52D5B5EED0037260B /* BeefDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeefDetail.swift; sourceTree = "<group>"; };
 		3FC175E72D5B5EFB0037260B /* ChickenDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenDetail.swift; sourceTree = "<group>"; };
+		3FE5EE2D2D5DF47F002EDCFC /* Beverages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverages.swift; sourceTree = "<group>"; };
 		AFA620482D311F350018E268 /* FoodDeliveryMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6204B2D311F350018E268 /* FoodDeliveryMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryMaxApp.swift; sourceTree = "<group>"; };
 		AFA6204F2D311F370018E268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				3E951C5F2D564499006A6942 /* ExploreView.swift */,
 				3E951C652D56476B006A6942 /* CategoryButton.swift */,
+				3FE5EE2D2D5DF47F002EDCFC /* Beverages.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -319,8 +322,8 @@
 		AFA6207F2D3128D00018E268 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E7D7E1A2D53941B003658CB /* Home */,
 				3E951C562D5643B2006A6942 /* MainTab */,
+				3E7D7E1A2D53941B003658CB /* Home */,
 				3E951C5C2D564463006A6942 /* Favourite */,
 				3E951C5B2D56445C006A6942 /* Explore */,
 				3E951C5A2D564450006A6942 /* Cart */,
@@ -504,6 +507,7 @@
 				3E951C5E2D564481006A6942 /* FavouriteView.swift in Sources */,
 				3E431B792D43AE18002829F8 /* Globs.swift in Sources */,
 				3E951C602D564499006A6942 /* ExploreView.swift in Sources */,
+				3FE5EE2E2D5DF47F002EDCFC /* Beverages.swift in Sources */,
 				3E7D7E1C2D53942B003658CB /* HomeView.swift in Sources */,
 				3E951C582D5643D3006A6942 /* MainTabView.swift in Sources */,
 				3FC175E22D5B5EC30037260B /* PepperDetail.swift in Sources */,
