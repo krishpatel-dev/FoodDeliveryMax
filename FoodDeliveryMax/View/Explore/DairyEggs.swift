@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Beverages: View {
+struct DairyEggs: View {
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -18,13 +18,15 @@ struct Beverages: View {
                     }
                     Spacer()
                     
-                    Text("Beverages")
+                    Text("Dairy & Eggs")
                         .font(.customfont(.bold, fontSize: 20))
                         .foregroundColor(.primaryText)
                     
                     Spacer()
                     
-                    NavigationLink(destination: Filter()) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
+                    }) {
                         Image("filter_ic")
                             .resizable()
                             .scaledToFit()
@@ -37,23 +39,23 @@ struct Beverages: View {
                 
                 HStack {
                     ProductItemView(
-                        imageName: "diet_coke",
-                        productName: "Beef Bone",
-                        description: "355ml, Price",
+                        imageName: "egg_chicken_red",
+                        productName: "Egg Chicken Red",
+                        description: "4pcs, Price",
                         price: "$1.99",
                         detailView: AnyView(BeefDetail()),
-                        imageWidth: 50,
+                        imageWidth: 100,
                         imageHeight: 90
                     )
                     .padding(.leading)
                     
                     ProductItemView(
-                        imageName: "sprite_can",
-                        productName: "Sprite Can",
-                        description: "325ml, Price",
+                        imageName: "egg_chicken_white",
+                        productName: "Egg Chicken White",
+                        description: "180g, Price",
                         price: "$1.50",
                         detailView: AnyView(ChickenDetail()),
-                        imageWidth: 50,
+                        imageWidth: 100,
                         imageHeight: 90
                     )
                     .padding(.trailing)
@@ -63,23 +65,23 @@ struct Beverages: View {
                 
                 HStack {
                     ProductItemView(
-                        imageName: "juice_apple_grape",
-                        productName: "Apple & Grape Juice",
-                        description: "2L, Price",
+                        imageName: "egg_pasta",
+                        productName: "Egg Pasta",
+                        description: "30gm, Price",
                         price: "$15.99",
                         detailView: AnyView(BeefDetail()),
-                        imageWidth: 90,
+                        imageWidth: 70,
                         imageHeight: 90
                     )
                     .padding(.leading)
                     
                     ProductItemView(
-                        imageName: "orenge_juice",
-                        productName: "Orange Juice",
+                        imageName: "egg_noodles",
+                        productName: "Egg Noodles",
                         description: "2L, Price",
                         price: "$15.99",
                         detailView: AnyView(ChickenDetail()),
-                        imageWidth: 90,
+                        imageWidth: 70,
                         imageHeight: 90
                     )
                     .padding(.trailing)
@@ -88,23 +90,23 @@ struct Beverages: View {
                 .padding(.top)
                 HStack {
                     ProductItemView(
-                        imageName: "cocacola_can",
-                        productName: "Coca Cola Can",
+                        imageName: "mayinnars_eggless",
+                        productName: "Mayonnais Eggless",
                         description: "325ml, Price",
                         price: "$4.99",
                         detailView: AnyView(BeefDetail()),
-                        imageWidth: 45,
+                        imageWidth: 50,
                         imageHeight: 90
                     )
                     .padding(.leading)
                     
                     ProductItemView(
-                        imageName: "pepsi_can",
-                        productName: "Pepsi Can",
-                        description: "330ml, Price",
+                        imageName: "egg_noodies_new",
+                        productName: "Egg Noodles",
+                        description: "330g, Price",
                         price: "$4.99",
                         detailView: AnyView(ChickenDetail()),
-                        imageWidth: 50,
+                        imageWidth: 100,
                         imageHeight: 90
                     )
                     .padding(.trailing)
@@ -113,23 +115,23 @@ struct Beverages: View {
                 .padding(.top)
                 HStack {
                     ProductItemView(
-                        imageName: "diet_coke",
-                        productName: "Beef Bone",
-                        description: "355ml, Price",
+                        imageName: "egg_chicken_red",
+                        productName: "Egg Chicken Red",
+                        description: "4pcs, Price",
                         price: "$1.99",
                         detailView: AnyView(BeefDetail()),
-                        imageWidth: 50,
+                        imageWidth: 100,
                         imageHeight: 90
                     )
                     .padding(.leading)
                     
                     ProductItemView(
-                        imageName: "sprite_can",
-                        productName: "Sprite Can",
-                        description: "325ml, Price",
+                        imageName: "egg_chicken_white",
+                        productName: "Egg Chicken White",
+                        description: "180g, Price",
                         price: "$1.50",
                         detailView: AnyView(ChickenDetail()),
-                        imageWidth: 50,
+                        imageWidth: 100,
                         imageHeight: 90
                     )
                     .padding(.trailing)
@@ -143,5 +145,5 @@ struct Beverages: View {
 }
 
 #Preview {
-    Beverages()
+    DairyEggs()
 }

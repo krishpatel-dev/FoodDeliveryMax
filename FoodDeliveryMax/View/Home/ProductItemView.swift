@@ -6,7 +6,8 @@ struct ProductItemView: View {
     let description: String
     let price: String
     let detailView: AnyView
-    
+    let imageWidth: CGFloat
+    let imageHeight: CGFloat
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -18,8 +19,9 @@ struct ProductItemView: View {
                     NavigationLink(destination: detailView) {
                         Image(imageName)
                             .resizable()
-                            .frame(width: 110, height: 90)
+                            .frame(width: imageWidth, height: imageHeight)
                             .padding(.bottom, 15)
+                            .padding(.leading)
                     }
                     
                     Text(productName)
@@ -38,11 +40,11 @@ struct ProductItemView: View {
                         Button(action: {}) {
                             Image("add")
                                 .resizable()
-                                .frame(width: 20, height: 20)
-                                .padding(7)
+                                .frame(width: 15, height: 15)
+                                .padding(9)
                         }
                         .background(Color.primaryApp)
-                        .cornerRadius(10)
+                        .cornerRadius(13)
                         .padding(.top)
                         .padding(.leading, 50)
                     }
@@ -52,6 +54,13 @@ struct ProductItemView: View {
 }
 
 #Preview {
-    ProductItemView(imageName: "banana", productName: "banana", description: "1kg", price: "$4.99",                             detailView: AnyView(BananaDetail())
+    ProductItemView(
+        imageName: "banana",
+        productName: "banana",
+        description: "1kg",
+        price: "$4.99",
+        detailView: AnyView(BananaDetail()),
+        imageWidth: 110,
+        imageHeight: 90
     )
 }

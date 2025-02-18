@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct CategoryCard: View {
-    var borderColor: Color
-    var backgroundColor: Color
-    var imageName: String
-    var text: String
+    let borderColor: Color
+    let backgroundColor: Color
+    let imageName: String
+    let text: String
+    let detailView: AnyView
     
     var body: some View {
-        
-        Button(action: {}){
+        NavigationLink(destination: detailView) { // Wrap the card in a NavigationLink
             RoundedRectangle(cornerRadius: 15)
                 .stroke(borderColor, lineWidth: 0.8)
                 .background(
@@ -29,17 +29,15 @@ struct CategoryCard: View {
                     }
                 )
         }
-        
     }
 }
 
-struct CategoryCard_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryCard(borderColor: Color.green.opacity(0.9),
-                     backgroundColor: Color.green.opacity(0.1),
-                     imageName: "frash_fruits",
-                     text: "Fresh Fruits & Vegetables")
-        .previewLayout(.sizeThatFits)
-        .padding()
-    }
+#Preview {
+    CategoryCard(
+        borderColor: Color.blue.opacity(0.9),
+        backgroundColor: Color.blue.opacity(0.1),
+        imageName: "banana",
+        text: "Fruits",
+        detailView: AnyView(Beverages())
+    )
 }

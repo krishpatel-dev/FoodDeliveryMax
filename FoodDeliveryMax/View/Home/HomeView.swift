@@ -56,7 +56,9 @@ struct HomeView: View {
                             productName: "Organic Bananas",
                             description: "7pcs, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(BananaDetail())
+                            detailView: AnyView(BananaDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading)
                         
@@ -65,7 +67,9 @@ struct HomeView: View {
                             productName: "Red Apple",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(AppleDetail())
+                            detailView: AnyView(AppleDetail()),
+                            imageWidth: 120,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                         
@@ -74,7 +78,9 @@ struct HomeView: View {
                             productName: "Organic Bananas",
                             description: "7pcs, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(BananaDetail())
+                            detailView: AnyView(BananaDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                     }
@@ -105,7 +111,9 @@ struct HomeView: View {
                             productName: "Bell Pepper Red",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(PepperDetail())
+                            detailView: AnyView(PepperDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading)
                         
@@ -114,7 +122,9 @@ struct HomeView: View {
                             productName: "Ginger",
                             description: "250gm, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(GingerDetail())
+                            detailView: AnyView(GingerDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                         
@@ -123,7 +133,9 @@ struct HomeView: View {
                             productName: "Bell Pepper Red",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(PepperDetail())
+                            detailView: AnyView(PepperDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                     }
@@ -198,7 +210,9 @@ struct HomeView: View {
                             productName: "Beef Bone",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(BeefDetail())
+                            detailView: AnyView(BeefDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading)
                         
@@ -207,7 +221,9 @@ struct HomeView: View {
                             productName: "Broiler Chicken",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(ChickenDetail())
+                            detailView: AnyView(ChickenDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                         
@@ -216,7 +232,9 @@ struct HomeView: View {
                             productName: "Beef Bone",
                             description: "1kg, Priceg",
                             price: "$4.99",
-                            detailView: AnyView(BeefDetail())
+                            detailView: AnyView(BeefDetail()),
+                            imageWidth: 110,
+                            imageHeight: 90
                         )
                         .padding(.leading, 8)
                     }
