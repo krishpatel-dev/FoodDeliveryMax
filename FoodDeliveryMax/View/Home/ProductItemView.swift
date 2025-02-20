@@ -38,7 +38,7 @@ struct ProductItemView: View {
                             .padding(.top)
                         
                         Button(action: {}) {
-                            Image("add")
+                            Image("add1")
                                 .resizable()
                                 .frame(width: 15, height: 15)
                                 .padding(9)

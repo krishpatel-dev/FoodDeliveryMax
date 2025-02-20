@@ -24,9 +24,7 @@ struct DairyEggs: View {
                     
                     Spacer()
                     
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
-                    }) {
+                    NavigationLink(destination: Filter()) {
                         Image("filter_ic")
                             .resizable()
                             .scaledToFit()

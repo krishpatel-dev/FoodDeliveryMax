@@ -28,7 +28,7 @@ struct HomeView: View {
                 Image("banner_top")
                     .resizable()
                     .ignoresSafeArea()
-                    .frame(width: .infinity, height: 110)
+                    .frame(maxWidth: .infinity, idealHeight: 110)
                     .padding(.leading)
                     .padding(.trailing)
                     .padding(.bottom, 8)

@@ -14,7 +14,7 @@ struct SignInView: View {
             Image("bottom_bg")
                 .resizable()
                 .ignoresSafeArea()
-                
+            
             
             VStack{
                 Image("sign_in_top")
@@ -111,21 +111,28 @@ struct SignInView: View {
                             .padding(.bottom, 15)
                         
                         HStack{
+                            Button(action: {}) {
+                                Image("google")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.trailing,5)
+                            }
                             
-                            Image("google")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .padding(.trailing,5)
-                            Image("facebook")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .padding(.trailing,5)
-                            Image("apple_logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 42, height: 42)
+                            Button(action: {}) {
+                                Image("facebook")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.trailing,5)
+                            }
+                            
+                            Button(action: {}) {
+                                Image("apple_logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 42, height: 42)
+                            }
                         }
                     }
                 }

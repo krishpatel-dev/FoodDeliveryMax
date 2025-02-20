@@ -1,21 +1,23 @@
 import SwiftUI
 
 struct LogInView: View {
-    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var loginVM = MainViewModel.shared;
-    @State var email : String = ""
-    @State var password : String = ""
-    
+    @State var email: String = ""
+    @State var password: String = ""
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @State private var navigateToMainTabView = false
+    @State private var isNavigating = false // Track navigation state
     
     var body: some View {
-        ZStack{
+        ZStack {
+            // Background
             Image("bottom_bg")
                 .resizable()
                 .scaledToFill()
                 .frame(width: .screenWidth, height: .screenHeight)
             
-            VStack{
+            VStack {
                 Image("color_logo")
                     .resizable()
                     .scaledToFit()
@@ -42,7 +44,7 @@ struct LogInView: View {
                 
                 TextField("Enter Email", text: $email)
                     .font(.customfont(.semibold, fontSize: 16))
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
+                    .frame(minWidth: 0, maxWidth: .infinity)
                 
                 Rectangle()
                     .frame(height: 1)
@@ -57,7 +59,7 @@ struct LogInView: View {
                 
                 SecureField("Enter Password", text: $password)
                     .font(.customfont(.semibold, fontSize: 16))
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
+                    .frame(minWidth: 0, maxWidth: .infinity)
                 
                 Rectangle()
                     .frame(height: 1)
@@ -65,7 +67,7 @@ struct LogInView: View {
                     .padding(.bottom, 15)
                 
                 Button {
-                    
+                    // Handle forgot password action
                 } label: {
                     Text("Forgot Password?")
                         .font(.customfont(.medium, fontSize: 13))
@@ -74,9 +76,20 @@ struct LogInView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(.bottom, 20)
                 
-                Button{
-                    loginVM.serviceCallLogin()
-                }label: {
+                Button {
+                    if email.isEmpty || password.isEmpty {
+                        alertMessage = "Please enter both email and password."
+                        showAlert = true
+                    } else if !isValidEmail(email) {
+                        alertMessage = "Please enter a valid email address."
+                        showAlert = true
+                    } else {
+                        // Trigger navigation with custom transition
+                        withAnimation {
+                            isNavigating = true
+                        }
+                    }
+                } label: {
                     Text("Log In")
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.white)
@@ -84,8 +97,8 @@ struct LogInView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
                         .background(Color.primaryApp)
                         .cornerRadius(15)
-                }.padding(.bottom, 20)
-                
+                }
+                .padding(.bottom, 20)
                 
                 HStack {
                     Text("Don't have an account?")
@@ -105,9 +118,8 @@ struct LogInView: View {
             .padding(.horizontal, 25)
             .padding(.bottom, .bottomInsets)
             
-            
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     NavigationLink {
                         SignInView()
                     } label: {
@@ -122,19 +134,33 @@ struct LogInView: View {
             }
             .padding(.top, 60)
             .padding(.horizontal, 20)
+            
+            // If navigation state is true, show MainTabView with custom transition
+            if isNavigating {
+                MainTabView()
+                    .transition(.move(edge: .trailing)) // Transition from the right
+                    .zIndex(1) // Bring it to the front
+            }
         }
-        
-        .alert(isPresented: $loginVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text( loginVM.errorMessage ), dismissButton: .default(Text("Ok")))
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
         .navigationBarHidden(true)
         .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
     }
+    
+    // Helper function to validate email
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
 }
 
+
 #Preview {
-    NavigationStack{
+    NavigationStack {
         LogInView()
     }
 }

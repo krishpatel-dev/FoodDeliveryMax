@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @State private var isFavorite = false
+    @State private var quantity = 1
     @Environment(\.presentationMode) var presentationMode // Access the presentation mode
     
     var productImage: String
@@ -51,7 +52,11 @@ struct ProductDetailView: View {
                     .padding(.top, -52)
                 
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        if quantity > 0 {
+                            quantity -= 1 // Decrease quantity
+                        }
+                    }) {
                         Image("subtack")
                             .resizable()
                             .frame(width: 15, height: 2)
@@ -63,12 +68,14 @@ struct ProductDetailView: View {
                         .stroke(Color.black.opacity(0.1), lineWidth: 0.8)
                         .frame(width: 35, height: 35)
                         .overlay(
-                            Text("1")
+                            Text("\(quantity)")
                                 .font(.customfont(.semibold, fontSize: 15))
                                 .foregroundColor(.primaryText)
                         )
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        quantity += 1
+                    }) {
                         Image("add_green")
                             .resizable()
                             .frame(width: 15, height: 15)
