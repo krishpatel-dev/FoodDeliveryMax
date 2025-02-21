@@ -34,10 +34,10 @@ struct CategoryCard: View {
 
 #Preview {
     CategoryCard(
-        borderColor: Color.blue.opacity(0.9),
-        backgroundColor: Color.blue.opacity(0.1),
-        imageName: "banana",
-        text: "Fruits",
+        borderColor: Color.green.opacity(0.9),
+        backgroundColor: Color.green.opacity(0.1),
+        imageName: "frash_fruits",
+        text: "Fresh Fruits & Vegetables",
         detailView: AnyView(Beverages())
     )
 }

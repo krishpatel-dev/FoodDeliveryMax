@@ -53,7 +53,7 @@ struct ProductDetailView: View {
                 
                 HStack {
                     Button(action: {
-                        if quantity > 0 {
+                        if quantity > 1 {
                             quantity -= 1 // Decrease quantity
                         }
                     }) {

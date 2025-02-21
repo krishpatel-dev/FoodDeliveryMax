@@ -10,6 +10,7 @@
 		3E392E842D3FCC1D0000EFA2 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3E392E832D3FCC1D0000EFA2 /* iPhoneNumberField */; };
 		3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E852D3FCF3A0000EFA2 /* LogInView.swift */; };
 		3E392E882D3FCF4A0000EFA2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */; };
+		3E3C6EEF2D68713D00D59F8E /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6EEE2D68713D00D59F8E /* CartItemRow.swift */; };
 		3E431B6C2D43AD63002829F8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B6A2D43AD63002829F8 /* HomeViewModel.swift */; };
 		3E431B6D2D43AD63002829F8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B6B2D43AD63002829F8 /* MainViewModel.swift */; };
 		3E431B6F2D43AD89002829F8 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B6E2D43AD89002829F8 /* ServiceCall.swift */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		3E392E852D3FCF3A0000EFA2 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		3E392E872D3FCF4A0000EFA2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3E3C6EEE2D68713D00D59F8E /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
 		3E431B6A2D43AD63002829F8 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3E431B6B2D43AD63002829F8 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3E431B6E2D43AD89002829F8 /* ServiceCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				3E951C612D5644AD006A6942 /* MyCartView.swift */,
+				3E3C6EEE2D68713D00D59F8E /* CartItemRow.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				3E951C5E2D564481006A6942 /* FavouriteView.swift in Sources */,
 				3E431B792D43AE18002829F8 /* Globs.swift in Sources */,
 				3E951C602D564499006A6942 /* ExploreView.swift in Sources */,
+				3E3C6EEF2D68713D00D59F8E /* CartItemRow.swift in Sources */,
 				3FE5EE2E2D5DF47F002EDCFC /* Beverages.swift in Sources */,
 				3EE6592D2D64BC69001512FF /* Filter.swift in Sources */,
 				3E7D7E1C2D53942B003658CB /* HomeView.swift in Sources */,
