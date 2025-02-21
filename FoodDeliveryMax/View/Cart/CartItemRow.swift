@@ -4,11 +4,12 @@ struct CartItemRow: View {
     // Declare parameters
     var imageName: String
     var itemName: String
-    var pricePerUnit: Double // Changed from price (string) to pricePerUnit (double)
+    var pricePerUnit: Double
     var description: String
     @Binding var quantity: Int
+    var imageWidth: CGFloat
+    var imageHeight: CGFloat
     
-    // Computed property to calculate the total price based on the quantity
     var totalPrice: String {
         let total = pricePerUnit * Double(quantity)
         return String(format: "$%.2f", total)
@@ -18,7 +19,8 @@ struct CartItemRow: View {
         HStack {
             Image(imageName)
                 .resizable()
-                .frame(width: 80, height: 70)
+                .scaledToFit()
+                .frame(width: imageWidth, height: imageHeight)
             
             VStack {
                 HStack {
@@ -80,7 +82,7 @@ struct CartItemRow: View {
                     
                     Spacer()
                     
-                    Text(totalPrice) // Display the computed total price
+                    Text(totalPrice)
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.primaryText)
                 }
@@ -93,6 +95,7 @@ struct CartItemRow: View {
 
 struct CartItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        CartItemRow(imageName: "bell_pepper_red", itemName: "Bell Pepper Red", pricePerUnit: 4.99, description: "1kg, Price", quantity: .constant(1))
+        // Providing values for image width and height
+        CartItemRow(imageName: "bell_pepper_red", itemName: "Bell Pepper Red", pricePerUnit: 4.99, description: "1kg, Price", quantity: .constant(1), imageWidth: 100, imageHeight: 80)
     }
 }
