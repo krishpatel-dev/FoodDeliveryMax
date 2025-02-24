@@ -1,17 +1,24 @@
-
 import SwiftUI
 
 struct HomeView: View {
+    // Array of banner images
+    let bannerImages = ["banner_top1", "banner_top2", "banner_top3", "banner_top4", "banner_top5"]
+    
+    @State private var currentBannerIndex = 0
+    @State private var timer: Timer?
+    // Added: offsetX state to control sliding animation
+    @State private var offsetX: CGFloat = 0
+    
     var body: some View {
-        VStack{
+        VStack {
             Image("color_logo")
                 .resizable()
                 .scaledToFit()
                 .ignoresSafeArea()
-                .frame(width:25, height: 30)
+                .frame(width: 25, height: 30)
                 .padding(.bottom, 1)
             
-            HStack{
+            HStack {
                 Image("location")
                     .resizable()
                     .ignoresSafeArea()
@@ -26,24 +33,45 @@ struct HomeView: View {
             SearchTextField(searchText: .constant(""), placeholder: "Search Store")
                 .padding(.horizontal)
             
-            ScrollView (.vertical, showsIndicators: false){
-                VStack{
-                    Image("banner_top")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .frame(maxWidth: .infinity, idealHeight: 110)
-                        .padding(.leading)
-                        .padding(.trailing)
-                        .padding(.bottom, 8)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    // Modified Banner Section without sliding animation
+                    VStack {
+                        // Display only the current image
+                        Image(bannerImages[currentBannerIndex])
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity, idealHeight: 130)
+                            .clipped()
+                            .transition(.opacity) // Fade transition
+                            .animation(.easeInOut(duration: 0.5), value: currentBannerIndex)
+                            .padding(.bottom, -7)
+                        
+                        HStack(spacing: 8) {
+                            ForEach(bannerImages.indices, id: \.self) { index in
+                                Circle()
+                                    .frame(width: 8, height: 8)
+                                    .foregroundColor(currentBannerIndex == index ? .primaryApp : .gray.opacity(0.5))
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom, -10)
+                    .onAppear {
+                        startBannerChangeTimer()
+                    }
+                    .onDisappear {
+                        timer?.invalidate()
+                    }
                     
-                    HStack{
+                    HStack {
                         Text("Exclusive Offer")
                             .font(.customfont(.semibold, fontSize: 19))
                             .foregroundColor(.primaryText)
                             .padding(.leading)
                         Spacer()
                         
-                        Button(action: {}){
+                        Button(action: {}) {
                             Text("See all")
                                 .padding()
                                 .foregroundColor(.primaryApp)
@@ -51,6 +79,7 @@ struct HomeView: View {
                                 .padding(.leading)
                         }
                     }
+                    .padding(.top, 5)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
@@ -89,14 +118,15 @@ struct HomeView: View {
                         }
                     }
                     
-                    HStack{
+                    // Best Selling Section
+                    HStack {
                         Text("Best Selling")
                             .font(.customfont(.semibold, fontSize: 19))
                             .foregroundColor(.primaryText)
                             .padding(.leading)
                         Spacer()
                         
-                        Button(action: {}){
+                        Button(action: {}) {
                             Text("See all")
                                 .padding()
                                 .foregroundColor(.primaryApp)
@@ -105,7 +135,6 @@ struct HomeView: View {
                         }
                     }
                     .padding(.top, 5)
-                    
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
@@ -144,14 +173,15 @@ struct HomeView: View {
                         }
                     }
                     
-                    HStack{
+                    // Groceries Section
+                    HStack {
                         Text("Groceries")
                             .font(.customfont(.semibold, fontSize: 19))
                             .foregroundColor(.primaryText)
                             .padding(.leading)
                         Spacer()
                         
-                        Button(action: {}){
+                        Button(action: {}) {
                             Text("See all")
                                 .padding()
                                 .foregroundColor(.primaryApp)
@@ -161,12 +191,10 @@ struct HomeView: View {
                     }
                     .padding(.top, 5)
                     
-                    
-                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             Button(action: {}) {
-                                HStack{
+                                HStack {
                                     Image("pulses")
                                         .resizable()
                                         .frame(width: 70, height: 70)
@@ -185,7 +213,7 @@ struct HomeView: View {
                             .padding(.leading)
                             
                             Button(action: {}) {
-                                HStack{
+                                HStack {
                                     Image("rice")
                                         .resizable()
                                         .frame(width: 70, height: 70)
@@ -244,6 +272,19 @@ struct HomeView: View {
                     }
                 }
                 .padding(.bottom)
+            }
+        }
+    }
+    
+    func startBannerChangeTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+            withAnimation(.easeInOut(duration: 0.5)) {
+                if currentBannerIndex < bannerImages.count - 1 {
+                    currentBannerIndex += 1
+                } else {
+                    currentBannerIndex = 0 // Reset to first image with animation
+                }
             }
         }
     }
