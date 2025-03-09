@@ -28,6 +28,14 @@
 		3E431B8B2D43AE91002829F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B862D43AE91002829F8 /* UserModel.swift */; };
 		3E431B8D2D43AEC3002829F8 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B8C2D43AEC3002829F8 /* ProductDetailViewModel.swift */; };
 		3E431B922D43B05E002829F8 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E431B912D43B05E002829F8 /* UIKitExtension.swift */; };
+		3E66CCBF2D7D64230064FDA3 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCBE2D7D64230064FDA3 /* OrdersView.swift */; };
+		3E66CCC12D7D64570064FDA3 /* MyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCC02D7D64570064FDA3 /* MyDetailsView.swift */; };
+		3E66CCC32D7D64760064FDA3 /* DeleveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCC22D7D64760064FDA3 /* DeleveryAddressView.swift */; };
+		3E66CCC52D7D64910064FDA3 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCC42D7D64910064FDA3 /* PaymentMethodsView.swift */; };
+		3E66CCC72D7D64AD0064FDA3 /* PromoCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCC62D7D64AD0064FDA3 /* PromoCodeView.swift */; };
+		3E66CCC92D7D64C40064FDA3 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCC82D7D64C40064FDA3 /* NotificationsView.swift */; };
+		3E66CCCB2D7D65030064FDA3 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCCA2D7D65030064FDA3 /* HelpView.swift */; };
+		3E66CCCD2D7D65220064FDA3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66CCCC2D7D65220064FDA3 /* AboutView.swift */; };
 		3E7D7E1C2D53942B003658CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D7E1B2D53942B003658CB /* HomeView.swift */; };
 		3E951C582D5643D3006A6942 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E951C572D5643D3006A6942 /* MainTabView.swift */; };
 		3E951C5E2D564481006A6942 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E951C5D2D564481006A6942 /* FavouriteView.swift */; };
@@ -102,6 +110,14 @@
 		3E431B862D43AE91002829F8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3E431B8C2D43AEC3002829F8 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		3E431B912D43B05E002829F8 /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		3E66CCBE2D7D64230064FDA3 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		3E66CCC02D7D64570064FDA3 /* MyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsView.swift; sourceTree = "<group>"; };
+		3E66CCC22D7D64760064FDA3 /* DeleveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleveryAddressView.swift; sourceTree = "<group>"; };
+		3E66CCC42D7D64910064FDA3 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
+		3E66CCC62D7D64AD0064FDA3 /* PromoCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeView.swift; sourceTree = "<group>"; };
+		3E66CCC82D7D64C40064FDA3 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		3E66CCCA2D7D65030064FDA3 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		3E66CCCC2D7D65220064FDA3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		3E7D7E1B2D53942B003658CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3E951C572D5643D3006A6942 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		3E951C5D2D564481006A6942 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
@@ -227,6 +243,14 @@
 			children = (
 				3E951C632D5644BB006A6942 /* AccountView.swift */,
 				3E3C6EF62D68A09200D59F8E /* Setting.swift */,
+				3E66CCBE2D7D64230064FDA3 /* OrdersView.swift */,
+				3E66CCC02D7D64570064FDA3 /* MyDetailsView.swift */,
+				3E66CCC22D7D64760064FDA3 /* DeleveryAddressView.swift */,
+				3E66CCC42D7D64910064FDA3 /* PaymentMethodsView.swift */,
+				3E66CCC62D7D64AD0064FDA3 /* PromoCodeView.swift */,
+				3E66CCC82D7D64C40064FDA3 /* NotificationsView.swift */,
+				3E66CCCA2D7D65030064FDA3 /* HelpView.swift */,
+				3E66CCCC2D7D65220064FDA3 /* AboutView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -517,10 +541,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA620862D312B020018E268 /* WelcomeView.swift in Sources */,
+				3E66CCCB2D7D65030064FDA3 /* HelpView.swift in Sources */,
 				3EC0E3FF2D411D24007144DE /* LineTextField.swift in Sources */,
 				3F1D88332D59F95500EE6DCC /* ProductDetailView.swift in Sources */,
 				3E951C5E2D564481006A6942 /* FavouriteView.swift in Sources */,
 				3E431B792D43AE18002829F8 /* Globs.swift in Sources */,
+				3E66CCC32D7D64760064FDA3 /* DeleveryAddressView.swift in Sources */,
 				3E951C602D564499006A6942 /* ExploreView.swift in Sources */,
 				3E3C6EEF2D68713D00D59F8E /* CartItemRow.swift in Sources */,
 				3FE5EE2E2D5DF47F002EDCFC /* Beverages.swift in Sources */,
@@ -532,11 +558,13 @@
 				3E431B922D43B05E002829F8 /* UIKitExtension.swift in Sources */,
 				3EE6592B2D64AE12001512FF /* DairyEggs.swift in Sources */,
 				3E392E862D3FCF3A0000EFA2 /* LogInView.swift in Sources */,
+				3E66CCC92D7D64C40064FDA3 /* NotificationsView.swift in Sources */,
 				3E951C662D56476B006A6942 /* CategoryButton.swift in Sources */,
 				3FC175DE2D5B5D9F0037260B /* AppleDetail.swift in Sources */,
 				3E431B6C2D43AD63002829F8 /* HomeViewModel.swift in Sources */,
 				3E431B7B2D43AE18002829F8 /* BackButton.swift in Sources */,
 				3E431B892D43AE91002829F8 /* ProductModel.swift in Sources */,
+				3E66CCBF2D7D64230064FDA3 /* OrdersView.swift in Sources */,
 				AFA620892D312C260018E268 /* UIExtension.swift in Sources */,
 				AFA6208B2D313E4D0018E268 /* SignInView.swift in Sources */,
 				3E431B8B2D43AE91002829F8 /* UserModel.swift in Sources */,
@@ -549,18 +577,22 @@
 				3E951C642D5644BB006A6942 /* AccountView.swift in Sources */,
 				3EDC68C02D54EB5C00D218FA /* ProductItemView.swift in Sources */,
 				3FC175E02D5B5EA40037260B /* BananaDetail.swift in Sources */,
+				3E66CCCD2D7D65220064FDA3 /* AboutView.swift in Sources */,
 				3E431B7D2D43AE18002829F8 /* TabButton.swift in Sources */,
 				3E431B7C2D43AE18002829F8 /* SectionTitleAll.swift in Sources */,
 				3E3C6EF72D68A09200D59F8E /* Setting.swift in Sources */,
 				3FC175E82D5B5EFB0037260B /* ChickenDetail.swift in Sources */,
 				3E431B6F2D43AD89002829F8 /* ServiceCall.swift in Sources */,
 				3E431B872D43AE91002829F8 /* NutritionModel.swift in Sources */,
+				3E66CCC72D7D64AD0064FDA3 /* PromoCodeView.swift in Sources */,
 				3E431B782D43AE18002829F8 /* SearchTextField.swift in Sources */,
 				3F12519A2D3FBF5B0041E677 /* CountryPickerView.swift in Sources */,
 				3E431B8D2D43AEC3002829F8 /* ProductDetailViewModel.swift in Sources */,
 				3E431B6D2D43AD63002829F8 /* MainViewModel.swift in Sources */,
 				3E951C622D5644AD006A6942 /* MyCartView.swift in Sources */,
 				3E3C6EF32D688B6F00D59F8E /* FavouriteBar.swift in Sources */,
+				3E66CCC12D7D64570064FDA3 /* MyDetailsView.swift in Sources */,
+				3E66CCC52D7D64910064FDA3 /* PaymentMethodsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
