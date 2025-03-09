@@ -3,10 +3,11 @@ import SwiftUI
 struct DairyEggs: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @State private var showFilterView = false  // State to control filter sheet visibility
     
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
                 }) {
@@ -23,7 +24,11 @@ struct DairyEggs: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: Filter()) {
+                Button(action: {
+                    withAnimation {
+                        showFilterView.toggle() // Show or hide filter view with animation
+                    }
+                }) {
                     Image("filter_ic")
                         .resizable()
                         .scaledToFit()
@@ -34,8 +39,8 @@ struct DairyEggs: View {
             .padding(.top)
             .padding(.horizontal)
             
-            ScrollView(.vertical, showsIndicators: false){
-                VStack{
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
                     
                     HStack {
                         ProductItemView(
@@ -88,6 +93,7 @@ struct DairyEggs: View {
                         .padding(.leading)
                     }
                     .padding(.top)
+                    
                     HStack {
                         ProductItemView(
                             imageName: "mayinnars_eggless",
@@ -113,6 +119,7 @@ struct DairyEggs: View {
                         .padding(.leading)
                     }
                     .padding(.top)
+                    
                     HStack {
                         ProductItemView(
                             imageName: "egg_chicken_red",
@@ -142,6 +149,18 @@ struct DairyEggs: View {
             }
             .navigationBarBackButtonHidden(true)
         }
+        .overlay(
+            // Bottom Sheet
+            VStack {
+                Spacer()
+                
+                if showFilterView {
+                    Filter(showFilterView: $showFilterView) // Show FilterView as bottom sheet
+                        .transition(.move(edge: .bottom)) // Slide from the bottom
+                        .animation(.spring(), value: showFilterView) // Spring animation for bottom sheet
+                }
+            }
+        )
     }
 }
 

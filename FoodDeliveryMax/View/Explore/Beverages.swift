@@ -3,10 +3,11 @@ import SwiftUI
 struct Beverages: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @State private var showFilterView = false // State to trigger the filter view bottom sheet
     
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss() // Dismiss the current view and go back
                 }) {
@@ -23,7 +24,11 @@ struct Beverages: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: Filter()) {
+                Button(action: {
+                    withAnimation {
+                        showFilterView.toggle() // Show or hide filter view with animation
+                    }
+                }) {
                     Image("filter_ic")
                         .resizable()
                         .scaledToFit()
@@ -33,8 +38,8 @@ struct Beverages: View {
             .padding(.top)
             .padding(.horizontal)
             
-            ScrollView(.vertical, showsIndicators: false){
-                VStack{
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
                     HStack {
                         ProductItemView(
                             imageName: "diet_coke",
@@ -112,36 +117,22 @@ struct Beverages: View {
                         .padding(.leading)
                     }
                     .padding(.top)
-                    
-                    HStack {
-                        ProductItemView(
-                            imageName: "diet_coke",
-                            productName: "Beef Bone",
-                            description: "355ml, Price",
-                            price: "$1.99",
-                            detailView: AnyView(BeefDetail()),
-                            imageWidth: 50,
-                            imageHeight: 90
-                        )
-                        .padding(.leading)
-                        
-                        ProductItemView(
-                            imageName: "sprite_can",
-                            productName: "Sprite Can",
-                            description: "325ml, Price",
-                            price: "$1.50",
-                            detailView: AnyView(ChickenDetail()),
-                            imageWidth: 50,
-                            imageHeight: 90
-                        )
-                        .padding(.trailing)
-                        .padding(.leading)
-                    }
-                    .padding(.top)
                 }
             }
             .navigationBarBackButtonHidden(true)
         }
+        .overlay(
+            // Bottom Sheet
+            VStack {
+                Spacer()
+                
+                if showFilterView {
+                    Filter(showFilterView: $showFilterView) // Show FilterView as bottom sheet
+                        .transition(.move(edge: .bottom)) // Slide from the bottom
+                        .animation(.spring(), value: showFilterView) // Spring animation for bottom sheet
+                }
+            }
+        )
     }
 }
 
